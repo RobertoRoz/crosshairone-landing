@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CrosshairOne is a native crosshair editor and transparent overlay for macOS. Build crosshairs from layers, calibrate them on screen, and switch presets with global hotkeys."
+    />
+    <meta name="theme-color" content="#080b09" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CrosshairOne — your crosshair, right where you need it" />
+    <meta
+      property="og:description"
+      content="A native crosshair editor and transparent overlay for macOS."
+    />
+    <title>CrosshairOne — crosshairs for macOS</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=6" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="./site-config.js"></script>
+    <script defer src="./i18n.js?v=6"></script>
+    <script defer src="./script.js?v=6"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="CrosshairOne — back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span>
+          </span>
+          <span>Crosshair<span>One</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#demo">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#feedback">Feedback</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-switcher" role="group" aria-label="Language">
+            <button class="language-option is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+            <button class="language-option" type="button" data-language="ru" aria-pressed="false">RU</button>
+          </div>
+          <a class="button button-small button-outline" href="#feedback">
+            Early access
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              Early build for macOS
+            </p>
+            <h1 id="hero-title">Your crosshair.<br /><em>Right where you need it.</em></h1>
+            <p class="hero-lede">
+              CrosshairOne is a native editor and transparent overlay for macOS.
+              Build crosshairs from layers, calibrate them directly on screen,
+              and switch presets with global hotkeys.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#demo">
+                <span>See how it works</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="m7.5 4.5 5.5 5.5-5.5 5.5" />
+                </svg>
+              </a>
+              <a class="button button-ghost" href="#feedback">Become a tester</a>
+            </div>
+
+            <ul class="hero-facts" aria-label="System requirements and highlights">
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.3a7.7 7.7 0 1 0 0 15.4 7.7 7.7 0 0 0 0-15.4Zm0 3.2v4.8l3.1 1.8" /></svg>
+                Core features work offline
+              </li>
+              <li>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M13.5 10.8c0-2.1 1.7-3.1 1.8-3.2a3.8 3.8 0 0 0-3-1.6c-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.8-2.8-.8C5 6.1 3.6 7 2.8 8.4c-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.7 2.4 2.9 2.3 1.1 0 1.6-.7 3.1-.7 1.4 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.2-2.6 1.2-2.7-.1 0-3.6-1.4-3.6-4.5ZM11.5 4.6A3.8 3.8 0 0 0 12.4 2 3.9 3.9 0 0 0 9.8 3.3a3.6 3.6 0 0 0-.9 2.6 3.2 3.2 0 0 0 2.6-1.3Z" /></svg>
+                macOS 14+ · Apple Silicon
+              </li>
+            </ul>
+          </div>
+
+          <div class="product-visual reveal reveal-delay" aria-label="CrosshairOne interface preview">
+            <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+            <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+            <div class="app-window">
+              <div class="window-toolbar">
+                <div class="traffic-lights" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="window-title">CrosshairOne</span>
+                <span class="overlay-pill"><i></i> Overlay on</span>
+              </div>
+
+              <div class="window-body">
+                <aside class="mock-sidebar" aria-hidden="true">
+                  <div class="mock-logo">
+                    <span class="mini-mark"></span>
+                    <b>CrosshairOne</b>
+                  </div>
+                  <div class="mock-nav-row"><span>⌂</span> Home</div>
+                  <div class="mock-nav-row active"><span>⌖</span> Designer</div>
+                  <div class="mock-nav-row"><span>▦</span> Library</div>
+                  <div class="mock-nav-row"><span>◇</span> Community</div>
+                  <div class="mock-nav-spacer"></div>
+                  <div class="mock-nav-row"><span>⚙</span> Settings</div>
+                </aside>
+
+                <div class="mock-workspace">
+                  <div class="mock-topbar" aria-hidden="true">
+                    <div>
+                      <span class="mock-kicker">DESIGNER</span>
+                      <strong>Neon precision</strong>
+                    </div>
+                    <span class="saved-state">Saved</span>
+                  </div>
+
+                  <div class="mock-editor">
+                    <div class="canvas-wrap">
+                      <div class="canvas-grid" aria-hidden="true">
+                        <div class="axis axis-x"></div>
+                        <div class="axis axis-y"></div>
+                        <div class="crosshair-demo">
+                          <i class="arm arm-top"></i>
+                          <i class="arm arm-right"></i>
+                          <i class="arm arm-bottom"></i>
+                          <i class="arm arm-left"></i>
+                          <i class="core"></i>
+                        </div>
+                        <span class="coordinate coordinate-x">X 0.0</span>
+                        <span class="coordinate coordinate-y">Y 0.0</span>
+                      </div>
+                      <div class="canvas-tools" aria-hidden="true">
+                        <span>100%</span><span>Move</span><span>Reset view</span>
+                      </div>
+                    </div>
+
+                    <div class="control-panel" aria-hidden="true">
+                      <span class="panel-label">LAYERS</span>
+                      <div class="layer-row selected"><i class="layer-icon lines"></i><span>Center lines</span><b>⌁</b></div>
+                      <div class="layer-row"><i class="layer-icon dot"></i><span>Center dot</span><b>⌁</b></div>
+                      <div class="add-layer">＋ Add layer</div>
+
+                      <span class="panel-label properties-label">APPEARANCE</span>
+                      <div class="mock-property"><span>Thickness</span><b>2.0</b></div>
+                      <div class="slider"><i style="width: 43%"></i><b style="left: 43%"></b></div>
+                      <div class="mock-property"><span>Center gap</span><b>5.0</b></div>
+                      <div class="slider"><i style="width: 59%"></i><b style="left: 59%"></b></div>
+                      <div class="mock-property"><span>Color</span><i class="color-chip"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card-one" aria-hidden="true">
+              <span class="hotkey-symbol">⌥</span>
+              <div><b>Quick Switch</b><small>Next crosshair</small></div>
+              <kbd>⌥ ⇧ ]</kbd>
+            </div>
+            <div class="floating-card floating-card-two" aria-hidden="true">
+              <i></i>
+              <div><b>Dead center</b><small>0.5 px calibration</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section section" id="demo" aria-labelledby="demo-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-number">01 · HOW IT WORKS</p>
+            <h2 id="demo-title">From a blank canvas<br />to a finished crosshair.</h2>
+            <p>One short video walks you through the entire flow: creation, calibration, and overlay use.</p>
+          </div>
+
+          <div class="video-card reveal">
+            <button class="video-launch" type="button" aria-label="Play the CrosshairOne video">
+              <span class="video-scanlines" aria-hidden="true"></span>
+              <span class="video-grid" aria-hidden="true"></span>
+              <span class="video-crosshair" aria-hidden="true"><i></i></span>
+              <span class="video-badge"><i></i> PRODUCT WALKTHROUGH</span>
+              <span class="video-time">01:24</span>
+              <span class="play-button" aria-hidden="true">
+                <svg viewBox="0 0 28 28"><path d="m10.2 7.2 10.1 6.8-10.1 6.8V7.2Z" /></svg>
+              </span>
+              <span class="video-caption">
+                <strong>See CrosshairOne in action</strong>
+                <small>The video plays right here — no trip to YouTube</small>
+              </span>
+            </button>
+            <p class="video-status" role="status" aria-live="polite"></p>
+          </div>
+
+          <ol class="steps-grid">
+            <li class="reveal">
+              <span>01</span>
+              <div><h3>Create</h3><p>Build a crosshair from a dot, lines, or pixels. Adjust the color, thickness, gap, and outline.</p></div>
+            </li>
+            <li class="reveal">
+              <span>02</span>
+              <div><h3>Calibrate</h3><p>Align the entire crosshair over any window in precise 0.5-point increments.</p></div>
+            </li>
+            <li class="reveal">
+              <span>03</span>
+              <div><h3>Use</h3><p>Turn on the overlay and cycle through saved presets with global hotkeys.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="features-section section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <p class="section-number">02 · FEATURES</p>
+              <h2 id="features-title">Everything you need.<br />Nothing you don't.</h2>
+            </div>
+            <p>CrosshairOne keeps things simple: create, save, and display your crosshair over the screen.</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card feature-card-wide reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M7 7l10 10M17 7 7 17" /></svg>
+              </div>
+              <div><h3>Layer-based editor</h3><p>Dots, lines, and pixel drawings stay fully editable. Move, hide, duplicate, and customize every layer independently.</p></div>
+              <div class="mini-layer-stack" aria-hidden="true"><i></i><i></i><i></i></div>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 12s3-5 8-5 8 5 8 5-3 5-8 5-8-5-8-5Z" /><circle cx="12" cy="12" r="2.2" /></svg>
+              </div>
+              <h3>Non-intrusive overlay</h3>
+              <p>The transparent window never steals focus and lets clicks pass through to the app underneath.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1" /></svg>
+              </div>
+              <h3>On-screen calibration</h3>
+              <p>The app steps out of the way while your crosshair stays visible. Move it with hotkeys and save the exact position.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3M18 7l-3 3M6 17l3-3" /></svg>
+              </div>
+              <h3>Quick Switch</h3>
+              <p>Create a set of favorite presets and cycle forward or back with global hotkeys.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 6.5h6l1.4 2H20v9.5H4V6.5Z" /><path d="M4 11h16" /></svg>
+              </div>
+              <h3>Local library</h3>
+              <p>Search, sorting, favorites, recent projects, and autosave — all on your Mac.</p>
+            </article>
+
+            <article class="feature-card feature-card-accent reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4" /><path d="M5 18v3h14v-3" /></svg>
+              </div>
+              <h3>Import and export</h3>
+              <p>Share editable projects in the <strong>.crosshairone</strong> format — no cloud or account required.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="local-section section" aria-labelledby="local-title">
+        <div class="container local-panel reveal">
+          <div class="local-copy">
+            <p class="section-number">03 · LOCAL-FIRST</p>
+            <h2 id="local-title">Your crosshairs<br />stay yours.</h2>
+            <p>The editor, library, overlay, import, and export all run locally. No internet connection is needed for core functionality.</p>
+          </div>
+
+          <div class="file-visual" aria-hidden="true">
+            <div class="file-card file-card-back"></div>
+            <div class="file-card file-card-main">
+              <span class="file-fold"></span>
+              <div class="file-mark"><span></span></div>
+              <strong>neon-precision</strong>
+              <small>.crosshairone</small>
+              <div class="file-meta"><span>4 layers</span><span>Editable</span></div>
+            </div>
+            <span class="local-badge"><i></i> STORED LOCALLY</span>
+          </div>
+        </div>
+
+        <div class="container compatibility-note reveal">
+          <div>
+            <span class="note-icon" aria-hidden="true">⌘</span>
+            <div><strong>Compatibility</strong><p>macOS 14 or later · Apple Silicon Mac</p></div>
+          </div>
+          <p>The overlay is designed to work over apps, Spaces, and full-screen windows. Results may vary depending on the display mode and restrictions of individual games.</p>
+        </div>
+      </section>
+
+      <section class="feedback-section section" id="feedback" aria-labelledby="feedback-title">
+        <div class="feedback-glow" aria-hidden="true"></div>
+        <div class="container feedback-grid">
+          <div class="feedback-copy reveal">
+            <p class="section-number">04 · FEEDBACK</p>
+            <h2 id="feedback-title">Help make<br />CrosshairOne better.</h2>
+            <p>Tell us what clicked, what got in the way, and what's missing. The more specific the example, the more useful your feedback.</p>
+
+            <div class="feedback-points">
+              <div><span>01</span><p><strong>Screenshots are welcome</strong><small>Up to 3 files, 10 MB each</small></p></div>
+              <div><span>02</span><p><strong>Your email is only used to reply</strong><small>And to send an early access invite, if you opt in</small></p></div>
+              <div><span>03</span><p><strong>Short feedback is welcome</strong><small>Even a single thought helps</small></p></div>
+            </div>
+          </div>
+
+          <div class="form-shell reveal reveal-delay">
+            <form id="feedback-form" method="post" enctype="multipart/form-data" accept-charset="UTF-8" novalidate>
+              <input class="form-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="form-row">
+                <label>
+                  <span>Name <small>optional</small></span>
+                  <input type="text" name="name" autocomplete="name" placeholder="What should we call you?" />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+                </label>
+              </div>
+
+              <label>
+                <span>What did you like?</span>
+                <textarea name="liked" rows="4" placeholder="For example: the intuitive editor, quick calibration…"></textarea>
+              </label>
+
+              <label>
+                <span>What could be improved? <b aria-hidden="true">*</b></span>
+                <textarea name="feedback" rows="5" placeholder="Describe the workflow, issue, or feature you were missing" required></textarea>
+              </label>
+
+              <fieldset class="file-field">
+                <legend>Screenshots or files <small>optional</small></legend>
+                <label class="file-drop" for="attachments">
+                  <input
+                    id="attachments"
+                    type="file"
+                    name="attachments[]"
+                    multiple
+                    accept=".png,.jpg,.jpeg,.webp,.heic,.pdf,.txt,.log,.crosshairone"
+                  />
+                  <span class="upload-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 16V4M7.5 8.5 12 4l4.5 4.5M4 15v5h16v-5" /></svg>
+                  </span>
+                  <span><strong>Choose files</strong><small>PNG, JPG, WEBP, HEIC, PDF, TXT, LOG, or .crosshairone</small></span>
+                </label>
+                <ul class="file-list" id="file-list" aria-live="polite"></ul>
+              </fieldset>
+
+              <label class="checkbox-row">
+                <input type="checkbox" name="early_access" value="yes" />
+                <span aria-hidden="true"></span>
+                <p>I'd like an early access invite</p>
+              </label>
+
+              <p class="privacy-disclosure">
+                After submission, your email, feedback, and attachments are sent
+                to the Basin form service and stored according to the form settings.
+                On the free plan, submissions are retained for up to 30 days.
+                <a href="./privacy.html">How feedback is handled</a>
+              </p>
+
+              <label class="checkbox-row">
+                <input type="checkbox" name="consent" value="yes" required />
+                <span aria-hidden="true"></span>
+                <p>I agree to be contacted about this feedback <b aria-hidden="true">*</b></p>
+              </label>
+
+              <button class="button button-primary submit-button" type="submit">
+                <span>Submit feedback</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m3 10 13-6-4.5 12-2.2-4.1L3 10Zm6.3 1.9L16 4" /></svg>
+              </button>
+
+              <p class="form-note">Do not attach passwords, identity documents, or other sensitive information.</p>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#top" aria-label="CrosshairOne — back to top">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>Crosshair<span>One</span></span>
+        </a>
+        <p>Built for people who notice every pixel.</p>
+        <a class="footer-link" href="./privacy.html">Data handling</a>
+        <a class="footer-email" data-contact-email hidden href="#feedback"></a>
+        <p>© <span id="current-year"></span> CrosshairOne</p>
+      </div>
+    </footer>
+  </body>
+</html>
