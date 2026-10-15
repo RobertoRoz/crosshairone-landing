@@ -123,21 +123,20 @@
 
   if (feedbackForm && endpointUrl) feedbackForm.action = endpointUrl.href;
 
-  feedbackForm?.addEventListener("submit", (event) => {
+  feedbackForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
     if (!feedbackForm.checkValidity()) {
-      event.preventDefault();
       feedbackForm.reportValidity();
       if (formStatus) formStatus.textContent = t("Please check the required fields.", "Проверьте обязательные поля.");
       return;
     }
 
     if (!renderFiles()) {
-      event.preventDefault();
       return;
     }
 
     if (!endpointUrl) {
-      event.preventDefault();
       if (formStatus) {
         formStatus.textContent = t(
           "The form isn't connected yet. Keep this page open and try again in a little while.",
@@ -148,9 +147,41 @@
     }
 
     const submitButton = feedbackForm.querySelector("button[type='submit']");
+    const submitLabel = submitButton?.querySelector("span");
+    const idleLabel = submitLabel?.textContent || t("Submit feedback", "Отправить отзыв");
     if (submitButton) {
       submitButton.disabled = true;
-      submitButton.querySelector("span").textContent = t("Sending…", "Отправляем…");
+      if (submitLabel) submitLabel.textContent = t("Sending…", "Отправляем…");
+    }
+    if (formStatus) formStatus.textContent = "";
+
+    try {
+      const response = await fetch(endpointUrl.href, {
+        method: "POST",
+        body: new FormData(feedbackForm),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error(`Basin returned ${response.status}`);
+
+      feedbackForm.reset();
+      fileList?.replaceChildren();
+      if (formStatus) {
+        formStatus.textContent = t(
+          "Thank you — your feedback has been sent.",
+          "Спасибо — ваш отзыв отправлен.",
+        );
+      }
+    } catch {
+      if (formStatus) {
+        formStatus.textContent = t(
+          "We couldn't send your feedback. Please try again.",
+          "Не удалось отправить отзыв. Попробуйте ещё раз.",
+        );
+      }
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+      if (submitLabel) submitLabel.textContent = idleLabel;
     }
   });
 
