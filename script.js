@@ -18,16 +18,24 @@
     document.head.append(analytics);
   }
 
-  const videoButton = document.querySelector(".video-launch");
+  const videoLink = document.querySelector(".video-launch");
   const videoStatus = document.querySelector(".video-status");
   const youtubeId = String(config.youtubeVideoId || "").trim();
   const validYoutubeId = /^[A-Za-z0-9_-]{11}$/.test(youtubeId);
 
-  if (videoButton) {
-    if (!validYoutubeId) videoButton.classList.add("is-placeholder");
-
-    videoButton.addEventListener("click", () => {
-      if (!validYoutubeId) {
+  if (videoLink) {
+    if (validYoutubeId) {
+      videoLink.href = `https://www.youtube.com/watch?v=${youtubeId}`;
+      videoLink.target = "_blank";
+      videoLink.rel = "noopener noreferrer";
+      videoLink.setAttribute(
+        "aria-label",
+        t("Watch the CrosshairOne video on YouTube", "Посмотреть видео о CrosshairOne на YouTube"),
+      );
+    } else {
+      videoLink.classList.add("is-placeholder");
+      videoLink.addEventListener("click", (event) => {
+        event.preventDefault();
         if (videoStatus) {
           videoStatus.textContent = t(
             "The video is coming soon. Leave your email below and we'll let you know when it's ready.",
@@ -38,19 +46,8 @@
           behavior: reducedMotion ? "auto" : "smooth",
           block: "start",
         });
-        return;
-      }
-
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`;
-      iframe.title = t("CrosshairOne video", "Видео о CrosshairOne");
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      iframe.className = "video-iframe";
-      videoButton.replaceWith(iframe);
-      iframe.focus();
-    });
+      });
+    }
   }
 
   const fileInput = document.querySelector("#attachments");

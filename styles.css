@@ -1011,12 +1011,11 @@ svg {
   position: relative;
 }
 
-.video-launch,
-.video-iframe {
+.video-launch {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 8.7;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 25px;
@@ -1029,14 +1028,23 @@ svg {
 .video-launch {
   padding: 0;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   text-align: left;
 }
 
-.video-launch::after {
+.video-thumbnail {
   position: absolute;
   inset: 0;
-  content: "";
-  background: linear-gradient(to top, rgba(2, 4, 3, 0.82), transparent 44%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.video-launch:hover .video-thumbnail {
+  filter: brightness(1.04);
+  transform: scale(1.01);
 }
 
 .video-launch:hover .play-button {
@@ -2061,8 +2069,7 @@ svg {
   .local-copy h2,
   .feedback-copy h2 { font-size: 42px; }
 
-  .video-launch,
-  .video-iframe { aspect-ratio: 4 / 3; border-radius: 18px; }
+  .video-launch { aspect-ratio: 16 / 9; border-radius: 18px; }
   .video-grid { transform: rotateX(57deg) scale(1.8) translateY(26%); }
   .video-crosshair { width: 58vw; }
   .play-button { width: 67px; height: 67px; }

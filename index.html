@@ -16,13 +16,13 @@
     />
     <title>CrosshairOne — crosshairs for macOS</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=6" />
+    <link rel="stylesheet" href="./styles.css?v=7" />
     <script>
       document.documentElement.classList.add("js");
     </script>
     <script defer src="./site-config.js?v=2"></script>
-    <script defer src="./i18n.js?v=6"></script>
-    <script defer src="./script.js?v=7"></script>
+    <script defer src="./i18n.js?v=7"></script>
+    <script defer src="./script.js?v=8"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -189,20 +189,20 @@
           </div>
 
           <div class="video-card reveal">
-            <button class="video-launch" type="button" aria-label="Play the CrosshairOne video">
-              <span class="video-scanlines" aria-hidden="true"></span>
-              <span class="video-grid" aria-hidden="true"></span>
-              <span class="video-crosshair" aria-hidden="true"><i></i></span>
-              <span class="video-badge"><i></i> PRODUCT WALKTHROUGH</span>
-              <span class="video-time">02:25</span>
+            <a class="video-launch" href="#feedback" aria-label="Watch the CrosshairOne video on YouTube">
+              <img
+                class="video-thumbnail"
+                src="./assets/crosshairone-youtube-thumbnail.jpg"
+                alt=""
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
               <span class="play-button" aria-hidden="true">
                 <svg viewBox="0 0 28 28"><path d="m10.2 7.2 10.1 6.8-10.1 6.8V7.2Z" /></svg>
               </span>
-              <span class="video-caption">
-                <strong>See CrosshairOne in action</strong>
-                <small>The video plays right here — no trip to YouTube</small>
-              </span>
-            </button>
+            </a>
             <p class="video-status" role="status" aria-live="polite"></p>
           </div>
 
