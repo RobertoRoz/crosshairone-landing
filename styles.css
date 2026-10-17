@@ -1049,7 +1049,8 @@ svg {
 
 .video-launch:hover .play-button {
   transform: translate(-50%, -50%) scale(1.08);
-  box-shadow: 0 0 60px rgba(0, 255, 64, 0.3);
+  background: #ff0033;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
 }
 
 .video-launch.is-placeholder .video-time {
@@ -1143,31 +1144,19 @@ svg {
   top: 50%;
   left: 50%;
   display: grid;
-  width: 82px;
-  height: 82px;
+  width: 78px;
+  height: 55px;
   place-items: center;
-  border: 1px solid rgba(0, 255, 64, 0.6);
-  border-radius: 50%;
-  background: rgba(0, 255, 64, 0.15);
-  box-shadow: 0 0 45px rgba(0, 255, 64, 0.2);
-  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  background: #ff0000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.38);
   transform: translate(-50%, -50%);
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-
-.play-button::before {
-  position: absolute;
-  inset: 8px;
-  border-radius: inherit;
-  background: var(--green);
-  content: "";
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
 .play-button svg {
-  position: relative;
-  z-index: 1;
-  width: 28px;
-  fill: #06120a;
+  width: 27px;
+  fill: #fff;
 }
 
 .video-caption {
@@ -2072,7 +2061,7 @@ svg {
   .video-launch { aspect-ratio: 16 / 9; border-radius: 18px; }
   .video-grid { transform: rotateX(57deg) scale(1.8) translateY(26%); }
   .video-crosshair { width: 58vw; }
-  .play-button { width: 67px; height: 67px; }
+  .play-button { width: 68px; height: 48px; border-radius: 12px; }
   .video-caption small { display: none; }
 
   .feature-grid { grid-template-columns: 1fr; }
