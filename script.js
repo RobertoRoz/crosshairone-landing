@@ -30,7 +30,7 @@
       videoLink.rel = "noopener noreferrer";
       videoLink.setAttribute(
         "aria-label",
-        t("Watch the CrosshairOne video on YouTube", "Посмотреть видео о CrosshairOne на YouTube"),
+        t("Watch the CrosshairNative video on YouTube", "Посмотреть видео о CrosshairNative на YouTube"),
       );
     } else {
       videoLink.classList.add("is-placeholder");
